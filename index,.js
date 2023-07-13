@@ -33,6 +33,13 @@ class Svg{
         this.shapeElement =''
     }
     render(){
-        return ``
+        return `<svg version"1.1" xmins="https://www.w3.org/2000/svg" width="300" height="200">${this.shapeEl}${this.textEl}</svg>`
     }
+    setText(text,color) {
+        if(text.length > 3 && text.length < 1) {
+            throw new Error('please enter in a character between 1-3!')
+        }
+        this.textEl = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
+    }
+
 }
