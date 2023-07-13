@@ -8,6 +8,6 @@ class Svg{
         this.shapeElement =''
     }
     render(){
-        
+        return ``
     }
 }
