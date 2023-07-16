@@ -5,18 +5,18 @@ const {generateShape} = require("./lib/shapes");
 
 inquirer
 .prompt = [
-    { // choose a shape
+    { 
     type: 'list',
     name: 'shape',
     message: 'Please choose which shape?',
     choices: ['circle', 'triangle', 'square'],
 },
-{   // color
+{   
     type: 'input',
     name: 'shape-color',
     message: 'Please enter in a desire color?',
 },
-{   //text input for what the logo will be
+{   
     type: 'list',
     name: 'text',
     message: 'Please enter in 3(Three) letters in CAPS?',
@@ -32,7 +32,7 @@ inquirer
     const svgPath = "./dist/logo.svg";
     const finalLogo = generateShape(data);
 
-    //Generate logo
+    
     fs.writeFile(svgPath, generateSVG(finalLogo), (err) =>
       err ? console.error(err) : console.log("Generated logo.svg")
     );
