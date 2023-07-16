@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/ninalor02/svg-logo-maker#readme",
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "canvas": "^2.11.2",
+    "express": "^4.18.2",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
     "jest": "^29.6.1"
   }
 }

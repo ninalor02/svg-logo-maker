@@ -41,5 +41,34 @@ class Svg{
         }
         this.textEl = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
     }
-
+    setShape(shape) {
+        this,shapeEl = shape.render();
+    }
 }
+
+// functions to init app
+
+function init() {
+    inquirer.createPromptModule(questions)
+    .then((data) => {
+        const logoText = data.text;
+        const svg = new SVG();
+        let userShape = '';
+        if(data.shape == 'Circle') {
+            userShape = new Circle();
+        } else if(data.shape == 'Square') {
+            serShape = new Square();
+        }else if(data.shape == 'Triangle') {
+            serShape = new Triangle();
+        }else {
+            console.timeLog("Please go back and pick a shape!")
+        }
+
+        userShape,setColor(data['shape-color']);
+        svg.setText(logoText, data['text-color']);
+        svg.setShape(userShape);
+        fs.writeFileSync(`${data.shape}.svg`, svg.render());
+
+        })
+}
+init();
