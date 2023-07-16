@@ -1,9 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const {generateSVG} = require("./lib/svg");
-const {generateShape} = require("./lib/shapes")
+const {generateShape} = require("./lib/shapes");
 
-const questions = [
+inquirer
+.prompt = [
     { // choose a shape
     type: 'list',
     name: 'shape',
@@ -31,7 +32,7 @@ const questions = [
     const svgPath = "./dist/logo.svg";
     const finalLogo = generateShape(data);
 
-    //Generate the svg logo here.
+    //Generate logo
     fs.writeFile(svgPath, generateSVG(finalLogo), (err) =>
       err ? console.error(err) : console.log("Generated logo.svg")
     );
