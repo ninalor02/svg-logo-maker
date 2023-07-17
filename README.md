@@ -41,9 +41,8 @@ Created by : Nina Lor 7/2023
 ## Credits & Sources
 ![Static Badge](https://img.shields.io/badge/Credits-General-blue)
 
-
-
-- https://www.w3.org/2000/svg
+- https://github.com/w3c/svgwg/
+- https://www.w3.org/TR/SVG2/
 - https://www.npmjs.com/package/inquirer
 - https://nodejs.org/en
 - https://developer.mozilla.org/en-US/docs/Web/SVG
